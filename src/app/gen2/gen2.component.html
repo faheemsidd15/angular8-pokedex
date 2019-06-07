@@ -1,12 +1,7 @@
-<div class="generation2">
-  <h1>Pokemon {{ secondGen.generation }}</h1>
-
-  <img
-    [ngClass]="{ spin: imageStyle }"
-    [ngStyle]="{ border: '1px solid black' }"
-    *ngFor="let pokemon of secondGen.pokemon"
-    src="{{ secondGen.location }}{{ pokemon }}.png"
-    alt="{{ pokemon }}"
-    (click)="secondGen.someFunction(pokemon)"
-  />
+<h1>{{ secondGen.gen }}</h1>
+<div class="gen-container">
+  <div class="generation" *ngFor="let pokemon of secondGen.pokemon">
+    <app-pokemon-images [pokemon]="pokemon"></app-pokemon-images>
+    <h3>{{ pokemon }}</h3>
+  </div>
 </div>

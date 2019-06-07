@@ -1,0 +1,20 @@
+@keyframes image-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: image-spin infinite 20s linear;
+}
+
+img {
+  width: 8vw;
+  border-radius: 500px;
+  border-block-start-color: white;
+  cursor: pointer;
+  margin: 1vw;
+}

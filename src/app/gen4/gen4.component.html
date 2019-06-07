@@ -1,0 +1,7 @@
+<h1>{{ fourthGen.gen }}</h1>
+<div class="gen-container">
+  <div class="generation" *ngFor="let pokemon of fourthGen.pokemon">
+    <app-pokemon-images [pokemon]="pokemon"></app-pokemon-images>
+    <h3>{{ pokemon }}</h3>
+  </div>
+</div>

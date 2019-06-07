@@ -1,24 +1,19 @@
-@keyframes image-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  padding: 5vh;
 }
 
-.spin {
-  animation: image-spin infinite 20s linear;
-}
-
-.generation3 {
+.gen-container {
+  padding-top: 1vh;
+  display: flex;
   width: 100%;
+  flex-wrap: wrap;
 
-  img {
-    width: 8vw;
-    border-radius: 500px;
-    border-block-start-color: white;
-    cursor: pointer;
-    margin: 1vw;
+  .generation {
+    width: 11%;
+    height: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

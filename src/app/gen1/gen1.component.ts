@@ -10,13 +10,8 @@ export class Gen1Component implements OnInit {
   imageStyle: boolean = false
 
   firstGen = {
-    generation: "1st Generation",
-    location: "assets/images/pokemon/",
-    pokemon: GetGen(1, 151),
-    someFunction: number => {
-      console.log(number)
-      this.imageStyle = !this.imageStyle
-    }
+    gen: "1st Generation",
+    pokemon: GetGen(1, 151)
   }
 
   constructor() {}

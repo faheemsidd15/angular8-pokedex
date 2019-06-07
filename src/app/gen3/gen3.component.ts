@@ -9,13 +9,8 @@ import { GetGen } from "../helpers/getGen"
 export class Gen3Component implements OnInit {
   imageStyle: boolean = false
   thirdGen = {
-    generation: "3rd Generation",
-    location: "assets/images/pokemon/",
-    pokemon: GetGen(252, 386),
-    someFunction: number => {
-      console.log(number)
-      this.imageStyle = !this.imageStyle
-    }
+    gen: "3rd Generation",
+    pokemon: GetGen(252, 386)
   }
 
   constructor() {}
