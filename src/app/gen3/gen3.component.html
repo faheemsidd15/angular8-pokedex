@@ -1,0 +1,12 @@
+<div class="generation3">
+  <h1>Pokemon {{ thirdGen.generation }}</h1>
+
+  <img
+    [ngClass]="{ spin: imageStyle }"
+    [ngStyle]="{ border: '1px solid black' }"
+    *ngFor="let pokemon of thirdGen.pokemon"
+    src="{{ thirdGen.location }}{{ pokemon }}.png"
+    alt="{{ pokemon }}"
+    (click)="thirdGen.someFunction(pokemon)"
+  />
+</div>
