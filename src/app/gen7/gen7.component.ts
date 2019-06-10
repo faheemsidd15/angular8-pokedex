@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core"
 import { GetGen } from "../helpers/getGen"
+import { DataService } from "../data.service"
 
 @Component({
   selector: "app-gen7",
@@ -9,10 +10,21 @@ import { GetGen } from "../helpers/getGen"
 export class Gen7Component implements OnInit {
   seventhGen = {
     gen: "7th Generation",
-    pokemon: GetGen(722, 809)
+    pokemon: []
   }
 
-  constructor() {}
+  constructor(private data: DataService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.data.getPokemonNames(86, 721).subscribe(data => {
+      this.seventhGen.pokemon = data.results.map((data, index) => {
+        const numbers = GetGen(722, 809)
+        return {
+          name: data.name,
+          number: numbers[index],
+          url: data.url
+        }
+      })
+    })
+  }
 }
