@@ -19,8 +19,11 @@ export class PokemonImagesComponent implements OnInit {
   getPokemon(url) {
     this.data.getPokemon(url).subscribe(data => {
       console.log(data)
+      const dialogRef = this.dialog.open(ModalComponent, {
+        width: "50vw",
+        data: data
+      })
     })
-    this.dialog.open(ModalComponent)
     //create modal here an pass the data
   }
 
