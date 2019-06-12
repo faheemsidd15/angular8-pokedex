@@ -18,8 +18,8 @@ export class Gen1Component implements OnInit {
   constructor(private data: DataService) {}
 
   ngOnInit() {
-    this.data.getPokemonNames(151).subscribe(data => {
-      this.firstGen.pokemon = data.results.map((data, index) => {
+    this.data.getPokemonNames(151, 0).subscribe(data => {
+      this.firstGen.pokemon = data["results"].map((data, index) => {
         const numbers = GetGen(1, 151)
         return {
           name: data.name,

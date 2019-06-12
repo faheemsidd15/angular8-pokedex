@@ -15,7 +15,7 @@ export class Gen4Component implements OnInit {
 
   ngOnInit() {
     this.data.getPokemonNames(107, 386).subscribe(data => {
-      this.fourthGen.pokemon = data.results.map((data, index) => {
+      this.fourthGen.pokemon = data["results"].map((data, index) => {
         const numbers = GetGen(387, 493)
         return {
           name: data.name,

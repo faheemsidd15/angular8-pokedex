@@ -1,8 +1,9 @@
 import { BrowserModule } from "@angular/platform-browser"
 import { NgModule } from "@angular/core"
 import { HttpClientModule } from "@angular/common/http"
-
 import { AppRoutingModule } from "./app-routing.module"
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations"
+import { MatDialogModule } from "@angular/material/dialog"
 import { AppComponent } from "./app.component"
 import { NavComponent } from "./nav/nav.component"
 import { Gen1Component } from "./gen1/gen1.component"
@@ -15,6 +16,7 @@ import { Gen5Component } from "./gen5/gen5.component"
 import { Gen6Component } from "./gen6/gen6.component"
 import { Gen7Component } from "./gen7/gen7.component"
 import { Gen8Component } from "./gen8/gen8.component"
+import { ModalComponent } from "./modal/modal.component"
 
 @NgModule({
   declarations: [
@@ -29,10 +31,12 @@ import { Gen8Component } from "./gen8/gen8.component"
     Gen5Component,
     Gen6Component,
     Gen7Component,
-    Gen8Component
+    Gen8Component,
+    ModalComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, MatDialogModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalComponent]
 })
 export class AppModule {}

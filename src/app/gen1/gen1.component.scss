@@ -15,5 +15,8 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    p {
+      text-transform: capitalize;
+    }
   }
 }

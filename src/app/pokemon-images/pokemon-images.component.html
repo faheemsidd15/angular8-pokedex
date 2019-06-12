@@ -1,7 +1,7 @@
 <img
   [ngClass]="{ spin: imageStyle }"
   [ngStyle]="{ border: '1px solid black' }"
-  src="{{ location }}{{ pokemon }}.png"
+  src="{{ location }}{{ pokemon.number }}.png"
   alt="{{ pokemon }}"
-  (click)="someFunction(pokemon)"
+  (click)="getPokemon(pokemon.url)"
 />

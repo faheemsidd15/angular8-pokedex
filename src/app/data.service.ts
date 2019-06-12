@@ -10,4 +10,7 @@ export class DataService {
   getPokemonNames(range, offset) {
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/?limit=${range}&offset=${offset}`)
   }
+  getPokemon(url) {
+    return this.http.get(url)
+  }
 }

@@ -16,7 +16,7 @@ export class Gen6Component implements OnInit {
 
   ngOnInit() {
     this.data.getPokemonNames(72, 649).subscribe(data => {
-      this.sixthGen.pokemon = data.results.map((data, index) => {
+      this.sixthGen.pokemon = data["results"].map((data, index) => {
         const numbers = GetGen(650, 721)
         return {
           name: data.name,

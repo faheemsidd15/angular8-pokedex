@@ -17,4 +17,10 @@ img {
   border-block-start-color: white;
   cursor: pointer;
   margin: 1vw;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: white;
+    transform: scale(1.5);
+  }
 }
