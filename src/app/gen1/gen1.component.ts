@@ -15,6 +15,8 @@ export class Gen1Component implements OnInit {
     pokemon: []
   }
 
+  loading = true
+
   constructor(private data: DataService) {}
 
   ngOnInit() {
@@ -27,6 +29,7 @@ export class Gen1Component implements OnInit {
           url: data.url
         }
       })
+      this.loading = false
     })
   }
 }

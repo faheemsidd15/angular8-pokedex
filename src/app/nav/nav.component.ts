@@ -7,14 +7,7 @@ import { ActivatedRoute } from "@angular/router"
   styleUrls: ["./nav.component.scss"]
 })
 export class NavComponent implements OnInit {
-  appTitle: string = "Pokedex"
-  active: boolean = false
-
   mainLogo: string = "assets/images/pokemon/pokemonLogo.png"
-
-  activate() {
-    this.active = true
-  }
 
   constructor() {}
 

@@ -3,5 +3,5 @@
   [ngStyle]="{ border: '1px solid black' }"
   src="{{ location }}{{ pokemon.number }}.png"
   alt="{{ pokemon }}"
-  (click)="getPokemon(pokemon.url)"
+  (click)="getPokemon(pokemon.url, pokemon.number)"
 />

@@ -1,1 +1,4 @@
-<h1 mat-dialog-title>Pokemon: {{ data.name }}</h1>
+<div class="pokedex" [ngClass]="{ water: pokemon.type[0] == 'water' || pokemon.type[1] == 'water' }">
+  <h1>Pokemon: {{ pokemon.name }}</h1>
+  <img [src]="data.image" alt="{{ data.image }}" />
+</div>

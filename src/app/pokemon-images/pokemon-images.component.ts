@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from "@angular/core"
 import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from "@angular/material"
 import { DataService } from "../data.service"
 import { ModalComponent } from "../modal/modal.component"
+import { resolve } from "url"
+import { never } from "rxjs"
 
 @Component({
   selector: "app-pokemon-images",
@@ -16,15 +18,15 @@ export class PokemonImagesComponent implements OnInit {
 
   constructor(public dialog: MatDialog, private data: DataService) {}
 
-  getPokemon(url) {
+  getPokemon(url, number) {
     this.data.getPokemon(url).subscribe(data => {
-      console.log(data)
-      const dialogRef = this.dialog.open(ModalComponent, {
-        width: "50vw",
-        data: data
+      const newData = { image: `${this.location}/${number}.png`, ...data }
+      this.dialog.open(ModalComponent, {
+        width: "70%",
+        closeOnNavigation: true,
+        data: newData
       })
     })
-    //create modal here an pass the data
   }
 
   ngOnInit() {}
