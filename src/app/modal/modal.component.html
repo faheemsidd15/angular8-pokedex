@@ -1,16 +1,14 @@
-<div
-  class="pokedex"
-  [ngClass]="{
-    water: pokemon.type[0] == 'water' || pokemon.type[1] == 'water',
-    grass: pokemon.type[0] == 'grass' || pokemon.type[1] == 'grass',
-    fire: pokemon.type[0] == 'fire' || pokemon.type[1] == 'fire'
-  }"
->
+<div class="pokedex">
   <div class="upper">
-    <span>{{ pokemon.name }}</span>
+    <div class="type-container">
+      <span>{{ pokemon.name }}</span>
+      <div *ngFor="let type of pokemon.type" [class]="'type-button ' + type">
+        {{ type }}
+      </div>
+    </div>
     <div class="image-container">
       <img [src]="pokemon.sprites.front_default" alt="{{ pokemon.sprites.front_default }}" />
     </div>
-    <div class="type-container">Types go here</div>
+    <div class="abilities-container">Abilities go here</div>
   </div>
 </div>
