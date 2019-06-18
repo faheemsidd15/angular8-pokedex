@@ -1,7 +1,1 @@
-<h1>{{ sixthGen.gen }}</h1>
-<div class="gen-container">
-  <div class="generation" *ngFor="let pokemon of sixthGen.pokemon">
-    <app-pokemon-images [pokemon]="pokemon"></app-pokemon-images>
-    <p>{{ pokemon.name }}</p>
-  </div>
-</div>
+<app-generation [generation]="generation"></app-generation>

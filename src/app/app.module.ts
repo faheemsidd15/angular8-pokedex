@@ -16,7 +16,8 @@ import { Gen5Component } from "./gen5/gen5.component"
 import { Gen6Component } from "./gen6/gen6.component"
 import { Gen7Component } from "./gen7/gen7.component"
 import { Gen8Component } from "./gen8/gen8.component"
-import { ModalComponent } from "./modal/modal.component"
+import { ModalComponent } from "./modal/modal.component";
+import { GenerationComponent } from './generation/generation.component'
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ModalComponent } from "./modal/modal.component"
     Gen6Component,
     Gen7Component,
     Gen8Component,
-    ModalComponent
+    ModalComponent,
+    GenerationComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, BrowserAnimationsModule, MatDialogModule],
   providers: [],

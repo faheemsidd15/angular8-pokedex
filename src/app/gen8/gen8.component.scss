@@ -1,19 +1,3 @@
 h1 {
   padding: 5vh;
 }
-
-.gen-container {
-  padding-top: 1vh;
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-
-  .generation {
-    width: 11%;
-    height: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
